@@ -29,18 +29,12 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-
+    <!--ChartJs-->
+    <!--CDN: <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>--> 
+    <script src="assets/js/chart.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: iPortfolio
-    * Updated: Mar 10 2023 with Bootstrap v5.2.3
-    * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
   </head>
 
   <body>
@@ -105,15 +99,19 @@
                 <div class="swiper-wrapper align-items-center">
 
                   <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-9.jpg" alt="">
+                    <img class="img-fluid" src="assets/img/Projects/Urban Gardens/A shared urban 1.png" alt="Poster">
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                    <img class="img-fluid" src="assets/img/Projects/Urban Gardens/poster1.png" alt="Poster">
                   </div>
 
                   <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                    <img class="img-fluid" src="assets/img/Projects/Urban Gardens/poster2.png" alt="Poster">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="img-fluid" src="assets/img/Projects/Urban Gardens/poster3.png" alt="Poster">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -128,8 +126,36 @@
                   <!-- <li><strong>Client</strong>: ASU Company</li> -->
                   <li><strong>Collegues: </strong> Davide Delrio, Stefano Trenti</li>
                   <li><strong>Project date</strong>: May 2023</li>
-                  <li><strong>GitHub</strong>: <a href="#">www.example.com</a></li>
+                  <li><strong>GitHub</strong>: <a href="https://github.com/Mattolo4/Urban-gardens" target="_blank">  Urban-gardens</a></li>
                 </ul>
+              </div>
+
+              <div class="d-flex" style="height:40vh; justify-content: center;"> 
+                <canvas id="chart"></canvas>
+                  <script>
+                    const ctx = document.getElementById('chart');
+                    const data = {
+                      datasets: [{
+                        data: [95.1, 4.9],
+                        borderWidth: 3,
+                      }],
+                      labels: ['Jupyter', 'Python']
+                    }
+
+                    new Chart(ctx, {
+                      type: 'doughnut',
+                      data: data,
+                      options: {
+                        responsive: true,
+                        plugins: {
+                          title: {
+                            display: true,
+                            text: 'Tools used'
+                          }
+                        },
+                      }
+                    })
+                  </script>
               </div>
             </div>
           </div>
@@ -216,7 +242,7 @@
             <div class="row about">
               <h2>Model Example: Oslo</h2>
               <div class="py-3 col-lg-6 text-center">
-                <img class="img-fluid" src="/assets/img/Projects/Urban Gardens/output example  1.png" alt="Neighborhoods/Communities" title="Neighborhoods/Communities">
+                <img class="img-fluid" src="assets/img/Projects/Urban Gardens/output example 1.png" alt="Neighborhoods/Communities" title="Neighborhoods/Communities">
               </div>
               <div class="col-lg-6 content">
                 <h4>Neighborhoods/Communities</h4>
@@ -234,7 +260,7 @@
                 <div>
                   \[min \sum_{j=1}^{n} d_j y_j + \sum_{i=1}^{m} \sum_{j=1}^{n}c_{ij} x_{ij} \]
                 </div>
-                <p>For more details visit the <a href="">GitHub</a> repository.</p>
+                <p>For more details visit the <a href="https://github.com/Mattolo4/Urban-gardens" target="_blank">GitHub</a> repository.</p>
               </div>
             </div>
           </div>
@@ -258,7 +284,7 @@
                     <strong><i>j</i></strong> (we considered monthly average production).</p>
               </div> 
               <div class="py-3 col-lg-6 text-center">
-                <img class="img-fluid" src="/assets/img/Projects/Urban Gardens/output example  2.png" alt="Plots of land" title="Plots of land">
+                <img class="img-fluid" src="assets/img/Projects/Urban Gardens/output example 2.png" alt="Plots of land" title="Plots of land">
               </div>
             </div>
           </div>
@@ -497,13 +523,13 @@
 
             <div class="pt-3 row">
               <div class="col-lg-4 text-center">
-                <img src="/assets/img/Projects/Urban Gardens/avg temp on each month.png" alt="avg temp on each month" title="avg temp on each month" class="img-fluid">
+                <img src="assets/img/Projects/Urban Gardens/avg temp on each month.png" alt="avg temp on each month" title="avg temp on each month" class="img-fluid">
               </div>
               <div class="col-lg-4 text-center">
-                <img src="/assets/img/Projects/Urban Gardens/Choices for Oslo.png" alt="Choices for Oslo" title="Choices for Oslo" class="img-fluid">
+                <img src="assets/img/Projects/Urban Gardens/Choices for Oslo.png" alt="Choices for Oslo" title="Choices for Oslo" class="img-fluid">
               </div>
               <div class="col-lg-4 text-center">
-                <img src="/assets/img/Projects/Urban Gardens/Choices for naples.png" alt="Choices for Naples" title="Choices for Naples" class="img-fluid">
+                <img src="assets/img/Projects/Urban Gardens/Choices for naples.png" alt="Choices for Naples" title="Choices for Naples" class="img-fluid">
               </div>
             </div>
           </div>
@@ -515,7 +541,7 @@
             of the community.</p>
             
             <div class="text-center">  
-              <img src="/assets/img/Projects/Urban Gardens/output example  3.png" alt="Optimized neighborhoods connection" title="Optimized neighborhoods connection" class="img-fluid">
+              <img src="assets/img/Projects/Urban Gardens/output example 3.png" alt="Optimized neighborhoods connection" title="Optimized neighborhoods connection" class="img-fluid">
             </div>
               
           </div>
@@ -569,4 +595,5 @@
     <script src="assets/js/main.js"></script>
 
   </body>
+
 </html>
