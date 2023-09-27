@@ -25,6 +25,9 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- Chart -->
+    <script src="assets/js/chart.js"></script>
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -125,9 +128,39 @@
                             </ul>
                         </div>
                         <!-- TODO: config the chart -->
-                        <div class="d-flex">
+                        <div class="d-flex text-center"  style="height: 30vh; justify-content: center;">
                             <canvas id="chart"></canvas>
                         </div>
+
+                        <script>
+                            const ctx = document.getElementById('chart');
+                            const data = {
+                                datasets: [{
+                                    data: [88, 12],
+                                    borderWidth: 3,
+                                    backgroundColor: [
+                                        'rgb(2, 204, 59)',
+                                        'rgb(3, 111, 252)'
+                                    ],
+                                }],
+                                labels: ['C++', 'Python'],
+                            }
+
+                            new Chart(ctx, {
+                                type: 'doughnut',
+                                data: data,
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'Tools used',
+                                            
+                                        }
+                                    },
+                                }
+                            })
+                        </script>
                         
                     </div>
                 </div>
