@@ -128,7 +128,7 @@
                             </ul>
                         </div>
                         <!-- TODO: config the chart -->
-                        <div class="d-flex text-center"  style="height:30vh;">
+                        <div class="d-flex text-center"  style="height: 30vh; justify-content: center;">
                             <canvas id="chart"></canvas>
                         </div>
 
@@ -136,10 +136,14 @@
                             const ctx = document.getElementById('chart');
                             const data = {
                                 datasets: [{
-                                    data: [72, 28],
+                                    data: [88, 12],
                                     borderWidth: 3,
+                                    backgroundColor: [
+                                        'rgb(2, 204, 59)',
+                                        'rgb(3, 111, 252)'
+                                    ],
                                 }],
-                                labels: ['C++', 'Python']
+                                labels: ['C++', 'Python'],
                             }
 
                             new Chart(ctx, {
@@ -150,7 +154,8 @@
                                     plugins: {
                                         title: {
                                             display: true,
-                                            text: 'Tools used'
+                                            text: 'Tools used',
+                                            
                                         }
                                     },
                                 }
