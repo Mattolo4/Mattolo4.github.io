@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="../../../">
+
+    <title>A* algorithm</title>
+    <meta content="A* algorithm" name="description">
+    <meta content="A* algorithm" name="keywords">
+    <meta content="Matteo Villani" name="Author">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Chart -->
+    <script src="assets/js/chart.js"></script>
+
+    <!-- LaTeX in HTML-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- A* dependencies -->
+    <script language="javascript" type="text/javascript" src="assets/js/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/js/Square.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/js/Astar.js"></script>
+</head>
+
+<body>
+    <!-- Mobile nav toggle button -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <span id="top"></span>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <img src="assets/img/profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Matteo Villani</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                            <span>Home</span></a></li>
+                    <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i>
+                            <span>About</span></a></li>
+                    <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                            <span>Resume</span></a></li>
+                    <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                            <span>Portfolio</span></a></li>
+                    <li><a href="index.html#interests" class="nav-link scrollto"><i class="bx bx-server"></i>
+                            <span>Interests</span></a></li>
+                    <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+                            <span>Contact</span></a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+
+
+    <main id="main">
+
+        <!-- Breadcrumbs -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>A* algorithm</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>A* algorithm</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container about">
+
+                <div class="row gy-4">
+                    <div class="col-lg-7 align-vert">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template.png" title="Examples of algorithm" alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 1.png" title="Examples of algorithm" alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 2.png" title="Examples of algorithm" alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 3.png" title="Examples of algorithm" alt="Examples of algorithm">
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: JS Script</li>
+                                <li><strong>Project date</strong>: Feb, 2023</li>
+                                <li><strong>Client</strong>: Just for fun
+                                <li><strong>GitHub</strong>: <a href="https://github.com/Mattolo4/A-star">Source code</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex text-center pt-3" style="height: 40vh; justify-content: center;">
+                            <canvas id="chart"></canvas>
+                        </div>
+
+                        <script>
+                            const ctx = document.getElementById('chart');
+                            const data = {
+                                datasets: [{
+                                    data: [90.5, 9.5],
+                                    borderWidth: 3,
+                                    backgroundColor: [
+                                        'rgb(102, 201, 4)',
+                                        'rgb(240, 14, 22)'
+                                    ],
+                                }],
+                                labels: ['JavaScript', 'HTML'],
+                            }
+
+                            new Chart(ctx, {
+                                type: 'doughnut',
+                                data: data,
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'Languages',
+                                        }
+                                    },
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+
+                <div class="content" data-aos="fade-left" data-aos-deley="100">
+                    <h2>What is A* algorithm?</h2>    
+                    <p>A* (<strong>A star</strong>) Search algorithm is one of the best and popular technique used in path-finding and graph traversals.
+                    Informally speaking, A* Search algorithms, unlike other traversal techniques, it has “brains”. What it means is that it
+                    is <strong>really a smart algorithm</strong> which separates it from the other conventional algorithms.</p>
+                    <p>It is also worth mentioning that many games and <strong>Google Maps</strong> (and others) use this algorithm to find the shortest path very
+                    efficiently</p>
+                    <p><small>I leave the <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">Wikipedia documentation</a> and also this useful <a href="https://www.geeksforgeeks.org/a-search-algorithm/">link</a> where you can dig deeper.</small></p>
+                </div>
+
+                <div class="content py-2" data-aos="fade-left" data-aos-deley="100">
+                    <h4>Explanation</h4>
+                    <p>In the example below we have a square grid having many obstacles (the black squares) and we are given a <strong>starting cell</strong> (top left)
+                        and a <strong>target cell</strong> (bootom right). We want to reach the target cell (if possible) form the starting cell <strong>as quickly as possible</strong>
+                        moving in all 8-ways.</p>
+
+                    <p>At each step A* needs to determine which of its paths to extend. It does so based on the <strong>cost of the path</strong> and an estimate of the 
+                        cost required to extend the path all the way to the goal. Specifically, A* selects the path that minimizes:</p>
+                    <div>\[f(n) = g(n) + h(n)\]</div>
+                    <p>where:</p>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i><strong>n</strong>is the next node on the path</li>
+                        <li><i class="bi bi-chevron-right"></i><strong>g(n)</strong> is the cost of the path from the start node to n</li>
+                        <li><i class="bi bi-chevron-right"></i><strong>h(n)</strong> is a heuristic function that estimates the cost of the cheapest path from n to the goal.</li>
+                    </ul>
+                    <p>A* terminates when the path it chooses to extend is a path from start to goal or if there are no paths eligible to be
+                    extended.</p>
+                </div>
+                <div class="content py-2" data-aos="fade-left" data-aos-deley="100">
+                    <h4>Example</h4>
+                    <p>In the following example i created a canvas (that is not responsive, so i'm sorry if you can't enjoy it properly on smaller devices) with the current settings: 
+                    <strong>canvas</strong> size of 800x800; each <strong>square</strong> has size 20x20; obastacle probability 35%, that means that if you reload the page the ostacles will be re-arrangeed differently, 
+                    so different paths each time with (almost) the 35% of the squares are black. I set the animation frames at <strong>15 FPS</strong> as you can apprecciate it better</p>
+                    <p>The flow of the script is based on <a href="https://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode">this </a>Pseudo-code.</p>
+
+                    <p>In the canvas you will see the computation of the algorithm <strong>at each step</strong> that checks its surroundings to find the correct square to move on. As said before, the black are 
+                        the obstacles, the withe ones are "free path", the <span style="background-color: rgba(255, 28, 11, 0.478);">red</span> squares are the squares that the algorithm considers at least once as "current path", the <span style="background-color: rgba(10, 97, 247, 0.5);">blue</span> are the squares that
+                        A* looks at, but it finds out that has greater cost than the current, so it's not the ideal path and it discards those. 
+                    </p>
+                    <p>When (if) A* reaches the goal square the shortest path is been highlighted in <span style="background-color: rgba(73, 242, 44, 0.5);">green</span>.</p>
+                </div>
+
+
+                <div class="col-lg-11 text-center align-vert py-3" id="canvasContainer" data-aos="fade-left" data-aos-deley="100" style="display: block;">
+                    <!-- there is the canvas here -->
+                </div>
+
+                <div class="content py-1">
+                    <p>As usual feel free to check the <a href="https://github.com/Mattolo4/A-star" title="GitHub repo">GitHub repo <i class="bi bi-github"></i></a> and play with the settings or 
+                        improve the algorithm by finding a better heuristic!</p>
+                </div>
+
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+    </main><!-- End #main -->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>iPortfolio</span></strong>
+            </div>
+            <div class="credits">
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="assets/html/Projects/astar.html#top"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
