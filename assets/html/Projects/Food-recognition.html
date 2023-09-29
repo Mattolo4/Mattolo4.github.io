@@ -95,8 +95,7 @@
             <div class="container">
 
                 <div class="row gy-4">
-
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 align-vert">
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
 
@@ -144,14 +143,16 @@
                             const ctx = document.getElementById('chart');
                             const data = {
                                 datasets: [{
-                                    data: [88, 12],
+                                    data: [72.2, 15.1, 11.1, 1.6],
                                     borderWidth: 3,
                                     backgroundColor: [
                                         'rgb(2, 204, 59)',
-                                        'rgb(3, 111, 252)'
+                                        'rgb(3, 111, 252)',
+                                        'rgb(252, 3, 190)',
+                                        'rgb(240, 151, 7)'
                                     ],
                                 }],
-                                labels: ['C++', 'Python'],
+                                labels: ['C++', 'C', 'CMake', 'Tcl'],
                             }
 
                             new Chart(ctx, {
@@ -162,7 +163,7 @@
                                     plugins: {
                                         title: {
                                             display: true,
-                                            text: 'Tools used',
+                                            text: 'Languages',
                                             
                                         }
                                     },
