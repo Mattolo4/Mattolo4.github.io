@@ -5,7 +5,7 @@
 const height = 800;  //window dim
 const dim = 20;     //square dim
 const obstacleProb = 0.35;
-const fr = 15;
+const fr = 10;
 
 //global setup
 const width = height;
