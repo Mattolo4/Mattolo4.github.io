@@ -1111,3 +1111,19 @@ section {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.align-items{
+    display: flex;
+    align-items: center;
+}
+
+.bg-image{
+    background-image: url('assets/img/portfolio/bg.jpg');
+        /* Replace with your image path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* This makes the background image fixed */
+        height: 100vh;
+        /* Adjust the height as needed */
+}
