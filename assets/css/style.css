@@ -206,7 +206,7 @@ h6 {
     background-color: #149ddd;
     color: #fff;
     width: 40px;
-    height: 40px;
+    height: 40px;   
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -229,7 +229,7 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg.jpg") top center;
+    background: url("../img/portfolio/bg.jpg") top center;
     background-size: cover;
 }
 
@@ -1115,15 +1115,4 @@ section {
 .align-items{
     display: flex;
     align-items: center;
-}
-
-.bg-image{
-    background-image: url('assets/img/portfolio/bg.jpg');
-        /* Replace with your image path */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* This makes the background image fixed */
-        height: 100vh;
-        /* Adjust the height as needed */
 }
