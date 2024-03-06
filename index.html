@@ -65,8 +65,8 @@
             
                 <div class="hero-container" data-aos="fade-in">
                     <h1>Matteo Villani</h1>
-                    <p>I'm a <span class="typed" data-typed-items="Computer Engineer, Computer Vision Software Developer, 
-                        Robotic Vision developer, Freelancer, Web Scraper, Drone programmer"></span></p> 
+                    <p>I'm a <span class="typed" data-typed-items="Computer Engineer, Robotic Software Engineer, 
+                        Robotic Vision developer, Freelancer, Software Engineer, Drone programmer"></span></p> 
                     <a href="CV.pdf" class="btn btn-primary" download="CV">Download CV</a>
                 </div>
         </section>  <!--End section-->
@@ -90,7 +90,7 @@
                             <h4 class="pb-2">Languages</h4>
                             <ul>
                                 <li><i class="bi bi-chevron-right"></i>Python</li>
-                                <li><i class="bi bi-chevron-right"></i>C++</li>
+                                <li><i class="bi bi-chevron-right"></i>C - C++</li>
                                 <li><i class="bi bi-chevron-right"></i>HTML / CSS / JS</li>
                                 <li><i class="bi bi-chevron-right"></i>SQL (PostgreSQL, SQLite)</li>
                                 <li><i class="bi bi-chevron-right"></i>Java</li>
@@ -103,13 +103,13 @@
                         <div class="col-lg-6">
                             <h4 class="pb-2">Tools, libraries and frameworks</h4>
                             <ul>
+                                <li><i class="bi bi-chevron-right"></i><a href="https://www.ros.org/" alt="Robot Operating System">Robot Operating System (ROS)</a></li>
                                 <li><i class="bi bi-chevron-right"></i><a href="https://opencv.org/">OpenCV</a></li>
-                                <li><i class="bi bi-chevron-right"></i><a href="https://getbootstrap.com/">Boostrap</a></li>
-                                <li><i class="bi bi-chevron-right"></i><a href="https://www.djangoproject.com/">Django</a></li>
-                                <li><i class="bi bi-chevron-right"></i><a href="https://www.electronjs.org/">Electron.js</a></li>
+                                <li><i class="bi bi-chevron-right"></i><a href="https://wiki.ros.org/rviz" >Rviz</a> </li>
+                                <li><i class="bi bi-chevron-right"></i><a href="https://gazebosim.org/home">Gazebo</li>
                                 <li><i class="bi bi-chevron-right"></i><a href="https://p5js.org/">p5.js</a></li>
+                                <li><i class="bi bi-chevron-right"></i><a href="https://getbootstrap.com/">Boostrap</a></li>
                                 <li><i class="bi bi-chevron-right"></i><a href="https://pypi.org/project/PuLP/">PuLP</a></li>
-                                <li><i class="bi bi-chevron-right"></i><a href="https://it.zerynth.com/">Zerynth</a></li>
                             </ul>
                         </div>
                     </div>
@@ -136,8 +136,8 @@
                         <div class="col-lg-12 d-flex justify-content-center">
                             <ul id="portfolio-flters" >
                                 <li data-filter="*" class="filter-active">All</li>
+                                <li data-filter=".filter-robotics">Robotics</li>
                                 <li data-filter=".filter-software">Software</li>
-                                <li data-filter=".filter-ai">AI</li>
                                 <li data-filter=".filter-script">Script</li>
                             </ul>
                         </div>
@@ -146,8 +146,38 @@
                     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
                         <!-- Poster imgs format: [7:5] -->
+                        <!-- Obstacles detection Routine -->
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-software filter-robotics">
+                            <div class="portfolio-wrap" title="Obstacles detection Routine">
+                                <a href="assets/html/Projects/Obstacles detection.html">
+                                    <img src="assets\img\Projects\Obstacle-detection\Poster.png" class="img-fluid" title="Obstacles detection Routine" alt="Obstacles detection Routine">
+                                </a>
+                                <div class="portfolio-links">
+                                    <a href="assets\img\Projects\Obstacle-detection\Poster.png" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="Obstacles detection Routine for the Robot Tiago"><i class="bi bi-search"></i></a>
+                                    <a href="assets/html/Projects/obstacle-detection.html" title="More Details"><i class="bi-info-circle"></i></a>
+                                    <a href="https://github.com/Mattolo4/Obstacles-Detection-for-Robot-Tiago" title="GitHub"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fetch-Delivery Routine -->
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-software filter-robotics">
+                            <div class="portfolio-wrap" title="Fetch-Delivery Routine">
+                                <a href="assets/html/Projects/Fetch-delivery.html">
+                                    <img src="assets\img\Projects\Fetch-Delivery\Tiago.jpg" class="img-fluid" title="Fetch-Delivery Routine" alt="Fetch-Delivery Routine">
+                                </a>
+                                <div class="portfolio-links">
+                                    <a href="assets\img\Projects\Fetch-Delivery\Tiago.jpg" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="Fetch-Delivery Routine for the Robot Tiago"><i class="bi bi-search"></i></a>
+                                    <a href="assets/html/Projects/Fetch-delivery.html" title="More Details"><i class="bi-info-circle"></i></a>
+                                    <a href="https://github.com/Mattolo4/Fetch-Delivery-routine-for-Tiago" title="GitHub"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Urban gardens -->
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-software">
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-software">
                             <div class="portfolio-wrap" title="AI planning tool">
                                 <a href="assets/html/Projects/Urban-gardens.html" title="More Details">
                                     <img src="assets/img/Projects/Urban Gardens/A shared urban 1.png" class="img-fluid" title="Urban Gardens" alt="Urban Gardens">
@@ -161,7 +191,7 @@
                         </div>
 
                         <!-- Food recognition -->
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-software">
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-software">
                             <div class="portfolio-wrap" title="Computer Vision Software">
                                 <a href="assets/html/Projects/Food-recognition.html" title="More details">
                                     <img src="assets/img/Projects/Food Recognition/Food recognition.png" class="img-fluid" alt="Food recognition and leftover estimation">
@@ -203,21 +233,8 @@
                                 </div>
                             </div>
                         </div>
+                        
 
-                        <!-- Fetch-Delivery Routine -->
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-software">
-                            <div class="portfolio-wrap" title="Fetch-Delivery Routine">
-                                <a href="assets/html/Projects/Fetch-delivery.html">
-                                    <img src="assets\img\Projects\Fetch-Delivery\Tiago.jpg" class="img-fluid" title="Fetch-Delivery Routine" alt="Fetch-Delivery Routine">
-                                </a>
-                                <div class="portfolio-links">
-                                    <a href="assets\img\Projects\Fetch-Delivery\Tiago.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Fetch-Delivery Routine for the Robot Tiago"><i class="bi bi-search"></i></a>
-                                    <a href="assets/html/Projects/Fetch-delivery.html" title="More Details"><i class="bi-info-circle"></i></a>
-                                    <a href="https://github.com/Mattolo4/Fetch-Delivery-routine-for-Tiago" title="GitHub"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
 
                         
                     </div>
@@ -300,9 +317,9 @@
                             </div>
 
                             <div class="progress">
-                                <span class="skill">C++ <i class="val">65%</i></span>
+                                <span class="skill">C++ <i class="val">85%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress">
@@ -324,9 +341,9 @@
                                 </div>
                             </div>
                             <div class="progress">
-                                <span class="skill">SQL <i class="val">65%</i></span>
+                                <span class="skill">SQL <i class="val">55%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -334,33 +351,33 @@
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                         
                             <div class="progress">
+                                <span class="skill">Robotics <i class="val">96%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="progress">
                                 <span class="skill">Computer Vision <i class="val">90%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress">
-                                <span class="skill">AI - Machine Learning <i class="val">80%</i></span>
+                                <span class="skill">AI - Machine Learning <i class="val">87%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress">
-                                <span class="skill">Robotic Vision <i class="val">83%</i></span>
+                                <span class="skill">Internet of things <i class="val">74%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress">
-                                <span class="skill">Internet of things <i class="val">80%</i></span>
+                                <span class="skill">Software Developing <i class="val">85%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <span class="skill">Software Developing <i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress">
