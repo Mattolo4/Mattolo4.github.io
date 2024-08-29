@@ -485,6 +485,20 @@
                 </div>
             </section><!-- End Contact Section -->
 
+
+
+            <!-- Visit Counter section -->
+            <script>
+                fetch('https://api.countapi.xyz/hit/mattolo4/visits')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Total Visits:", data.value); // This logs the count to the browser's console
+                        document.getElementById('visits').innerText = data.value;
+                    });
+            </script>
+            <!-- Hidden Visit Counter -->
+            <p style="display:none;">Visite totali: <span id="visits"></span></p>
+            
         </main>
 
         <!-- Footer -->
