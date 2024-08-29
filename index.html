@@ -488,17 +488,15 @@
 
 
             <!-- Visit Counter section -->
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QT0BDN1XE"></script>
             <script>
-                fetch('https://api.countapi.xyz/hit/mattolo4/visits')
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log("Total Visits:", data.value); // This logs the count to the browser's console
-                        document.getElementById('visits').innerText = data.value;
-                    });
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'G-9QT0BDN1XE');
             </script>
-            <!-- Hidden Visit Counter -->
-            <p style="display:none;">Visite totali: <span id="visits"></span></p>
-            
         </main>
 
         <!-- Footer -->
