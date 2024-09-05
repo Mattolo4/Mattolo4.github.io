@@ -32,4 +32,4 @@ function displayLastUpdate(dateString) {
 }
 
 // Call the function with the last update date in dd/mm/yyyy format
-displayLastUpdate('1/9/2024'); // TODO: REPLACE
+displayLastUpdate('5/9/2024'); // TODO: REPLACE
