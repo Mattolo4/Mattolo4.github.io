@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="../../../">
+
+    <title>Robot Localization</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/Icon/favicon.png">
+    <meta content="Particle Filter implementation for Robot Localization" name="description">
+    <meta content="Particle Filter Robot Localization " name="keywords">
+    <meta content="Matteo Villani" name="Author">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Chart -->
+    <script src="assets/js/chart.js"></script>
+
+    <!-- LaTeX in HTML-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<!-- Visit Counter section -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QT0BDN1XE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9QT0BDN1XE');
+</script>
+
+<body>
+    <!-- Mobile nav toggle button -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <span id="top"></span>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <!--for better resolution check the img size-->
+                <img src="assets/img/profile-img2-sqaured.jpg" alt="Profile Image" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Matteo Villani</a></h1>
+
+                <div class="social-links mt-3 text-center">
+                    <a href="mailto:villanimatteo33@gmail.com" class="email"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://github.com/Mattolo4?tab=repositories" class="github"><i
+                            class="bx bxl-github"></i></a>
+                    <a href="https://www.instagram.com/matto.lo4/" class="instagram"><i
+                            class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/matteo-villani-851ba5199/" class="linkedin"><i
+                            class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!--Nav menu-->
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                            <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> 
+                            <span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-diagram-3"></i>
+                            <span>Skills</span></a></li>
+                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                            <span>Portfolio</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                            <span>Resume</span></a></li>
+                    <li><a href="#interests" class="nav-link scrollto"><i class="bx bx-server"></i>
+                            <span>Interests</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+                            <span>Contacts</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END header -->
+
+
+
+    <main id="main">
+
+        <!-- Breadcrumbs -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Particle Filter for Robot Localization</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Robot Localization</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container about">
+
+                <div class="row gy-4">
+                    <div class="col-lg-7 align-vert">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/mario star-transp.png" title="A star"
+                                        alt="A star">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template.png" title="Examples of algorithm"
+                                        alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 1.png" title="Examples of algorithm"
+                                        alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 2.png" title="Examples of algorithm"
+                                        alt="Examples of algorithm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/Projects/Astar/template 3.png" title="Examples of algorithm"
+                                        alt="Examples of algorithm">
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: Intelligent Robot Software</li>
+                                <li><strong>Project date</strong>: May, 2024</li>
+                                <li><strong>Client</strong>: <a href="https://www.tugraz.at/home">University</a> Project
+                                <li><strong>GitHub</strong>: <a href="https://github.com/Mattolo4/Particle-Filter-Localization-for-Robot-Husky">Source code</a></li>
+                                <li><strong>Main tool</strong>: <a href="https://www.ros.org/">ROS</a> - <a href="https://wiki.ros.org/rviz">Rviz</a> - <a href="https://gazebosim.org/home">Gazebo</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex text-center pt-3" style="height: 40vh; justify-content: center;">
+                            <canvas id="chart"></canvas>
+                        </div>
+
+                        <script>
+                            const ctx = document.getElementById('chart');
+                            const data = {
+                                    datasets: [{
+                                        data: [86.2, 13.8],
+                                        borderWidth: 3,
+                                        backgroundColor: [
+                                            'rgb(2, 204, 59)',
+                                            'rgb(252, 3, 190)'
+                                        ],
+                                    }],
+                                    labels: ['C++', 'Cmake'],
+                                }
+
+                            new Chart(ctx, {
+                                type: 'doughnut',
+                                data: data,
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'Languages',
+                                        }
+                                    },
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+
+                <div class="content" data-aos="fade-left" data-aos-deley="100">
+                    <h2>Description</h2>
+                    
+                    <div class="row about">
+                        <div class="col-lg-8 content">
+                            <p>The goal of this project is to develop an algorithm for <b>Robot Localization</b> based on a <b>Particle Filter
+                                    (PF)</b>
+                                for the robot <a href="https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/">Clearpath Robotics
+                                    Husky</a>. The robot consists of two motors that are designed for
+                                a differential drive robot. A laser scanner is mounted on top To achieve this we use:
+                            </p>
+
+                            <ul>
+                            <li><i class="bi bi-chevron-right"></i>Laser data (lidar)</li>
+                            <li><i class="bi bi-chevron-right"></i>Robot's wheel odometry</li>
+                            <li><i class="bi bi-chevron-right"></i>Map</li>
+                        </ul>
+                        </div>
+                        <div class="align-vert col-lg-4 justify-content-center">
+                            <figure class="figure">
+                                <img src="assets/img/Projects/Robot Localization/husk1y.jpg" alt="Clearpath Robotics Husky" title="Clearpath Robotics Husky" class="img-fluid rounded figure-img">
+                            </figure>
+                            <figcaption class="figure-caption">Clearpath Robotics Husky</figcaption>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 row-lg-6 text-center">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img rounded" width="800" height="513"
+                                src="assets\img\Projects\Robot Localization\enviroinment.png" alt="Map" title="Map">
+                        </figure>
+                        <figcaption class="figure-caption">Indoor map</figcaption>
+                    </div>
+
+                    <p class="pt-3">Firstly, we implemented the <b>prediction of the robot</b> using the wheel odometry. Then, we created a <b>likelihood field</b>
+                        using the wheel odometry that can be used for the PF. Using the likelihood field we performed a <b>correction step</b>
+                        using laser scans before doing the <b>resampling</b> of the particles. Finally we derived the <b>estimated pose</b> based on 
+                        the distribution of the particle set.
+                    </p>
+                    <p>To implement the necessary parts of the PF algorithm the following framework it's used:</p>
+                    
+                    <div class="pt-2 row-lg-7 text-center">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img" width="800" height="348" src="assets/img/Projects/Robot Localization/pf alg.png" alt="Pseudo-code PF" title="Pseudo-code PF">
+                        </figure>
+                        <figcaption class="figure-caption">Particle Filter algorithm</figcaption>
+                    </div>
+
+                    <p>where:</p>
+                    <p>The <i>for</i> (lines 3-8) will <b>generate new samples</b>; 
+                        the line 6 computes the <b>importance weight</b>;
+                        the line 7 will <b>update the normalization factor</b>;
+                        the line 8 <b>inserts</b> the generated particle into the set;
+                        the line 10 is in charge of <b>normalizing the weights</b>.</p>
+                </div>
+
+
+                <div class="content pt-4 py-2" data-aos="fade-left" data-aos-deley="150">
+                    <h2>Likelihood field</h2>
+                    <p>First things first: we need to <b>initialize the particle set</b> randomly loaded in the environment (map); the framework
+                        above will use this distribution of particles to infere the robot's location. At each iteration of the cycle
+                        1 particle is generated with random <code>x</code> and <code>y</code>, that doesn't fall on a wall, with random
+                        orientation.
+                    </p>
+
+                    <p> To pre-integrate the <b>likelihood field</b> of the environment I considered the <b>Beam-based Proximity Model</b>: it calculates the
+                        probabilities based on the distance between the expected measurement (<i>z_exp</i>) and the actual measurement obtained from
+                        the laser sensor (<i>z</i>). Firstly, for each cell of the 'map', I compute <b>the distance to the closest obstacle</b> using the Breadth-First Search Algorithm. 
+                        This distance can be seen as (<i>z_exp - z</i>) if the actual scan beam (<i>z</i>) falls into the cell. Having that value it's possible to 
+                        compute:
+                    </p>
+
+                    <div class="row pb-2">
+                        <div class="col-lg-6 text-center">
+                            $$ p_{hit} = 1 \cdot e^{-0.5 \left( \frac{(z - z_{exp})^2}{\sigma_{hit}^2} \right)} $$
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            $$ p_{rand} = \frac{1}{z_{max}} $$
+                        </div>
+                    </div>
+
+                    <p>Where: 𝒑𝒉𝒊𝒕 it's essentially a measure of how well the predicted measurement matches the actual measurement obtained from 
+                        the sensor, 𝝈𝒉𝒊𝒕 represents the standard deviation of the hit probability distribution, 𝒑𝒓𝒂𝒏𝒅 is the (uniform) random 
+                        measurement, 𝒛_𝒎𝒂𝒙 is the max range for the laser. By combining these values in a weighted sum, we obtain the total weighted 
+                        probability for each cell of the map.
+                    </p>
+
+                    <div class="pt-2 row-lg-7 text-center">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img"  width="900" height="296" src="assets/img/Projects/Robot Localization/scheme-likelihood.png" alt="Pseudo-code PF" title="Pseudo-code PF">
+                        </figure>
+                        <figcaption class="figure-caption">Likelihood field</figcaption>
+                    </div>
+                </div>
+
+                <div class="content pt-4 py-2" data-aos="fade-left" data-aos-deley="200">
+                    <h2>Motion model</h2>
+                    <p>This task required to update all the particles whenever a new odometry
+                    has been received by the callback function (aka: the robot moves).</p>
+                    <p> The particles update considering the <b>robot's previous odometry</b>; all particles move in unison 
+                        with the robot’s motion, so they are more likely to converge towards the 
+                        robot’s true pose. We implemented the Motion Model only if the robot was 
+                        moving (thus, if its absolute value of <b>linear or angular velocity</b> obtained from the odometry is > 0.001). Then,  I retrieve the 
+                        <b>Robot’s previous odometry</b> (x,y,𝜃), <b>the Robot’s new odometry</b> (x’,y’,𝜃′) and the <b>particle’s previous odometry</b>
+                        (x_prev_part, y_prev_part,𝜃_prev_part). With these quantities I can compute 𝜹𝒓𝒐𝒕𝟏, 𝜹𝒕𝒓𝒂𝒏𝒔, 𝜹𝒓𝒐𝒕𝟐, they represent 
+                        the incremental motion performed by the robot between consecutive time steps.
+                    </p>
+
+                    <div class="row about pb-3">
+                        <div class="col-lg-6">
+                            <p>
+                                $$ \delta_{\text{rot}1} = \text{atan2}(y' - y, x' - x) - \theta $$
+                                $$ \delta_{\text{rot}2} = \theta' - \theta - \delta_{\text{rot}1} $$
+                                $$ \delta_{\text{trans}} = \sqrt{(x' - x)^2 + (y' - y)^2} $$
+                            </p>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <figure class="figure">
+                                <img class="img-fluid figure-img" width="800" height="226"
+                                    src="assets/img/Projects/Robot Localization/incremental motion.png" alt="Incremental motion"
+                                    title="Incremental motion">
+                            </figure>
+                            <figcaption class="figure-caption">Incremental motion</figcaption>
+                        </div>
+                    </div>
+
+                    <p>At this point we compute the predicted incremental motion with added noise, incorporating uncertainties in the robot's
+                        motion, namely:
+                        $$ \hat{\delta}_{\text{rot}1} = \delta_{\text{rot}1} + \epsilon_{a1} |\delta_{\text{rot}1}| + \epsilon_{a2} |\delta_{\text{trans}}| $$
+                        $$ \hat{\delta}_{\text{trans}} = \delta_{\text{trans}} + \epsilon_{a3} |\delta_{\text{trans}}| + \epsilon_{a4} |\delta_{\text{rot}1} + \delta_{\text{rot}2}| $$
+                        $$ \hat{\delta}_{\text{rot}2} = \delta_{\text{rot}2} + \epsilon_{a1} |\delta_{\text{rot}2}| + \epsilon_{a2} |\delta_{\text{trans}}| $$
+                    </p>
+
+                    <p>After computing the predicted motion, we are ready to compute the <b>update pose</b> (x_update, y_update,𝜃_update) for
+                    each particle according to these formulas:</p>
+                    <p>
+                        $$x_{upd} = x_{prev_{part}} + \hat{\delta_{trans}} * cos(\theta_{prev_{part}} + \hat{\delta_{rot1}})$$
+                        $$y_{upd} = y_{prev_{part}} + \hat{\delta_{trans}} * sin(\theta_{prev_{part}} + \hat{\delta_{rot1}})$$
+                        $$\theta_{upd} = \theta_{prev_{part}} + \hat{\delta_{rot1}} + \hat{\delta_{rot2}}$$
+                    </p>
+                </div>
+
+                <div class="content pt-4 py-1">
+                    <h2>Resampling</h2>
+                    <p>At this point we need to define each particle's weight combining the <b>laser scan data</b> and the pre-stored <b>likelihood values</b>.</p>
+                    <p>I will skip some details that are available on the report published on <b><a href="https://github.com/Mattolo4?tab=repositories" title="GitHub repo">GitHub <i class="bi bi-github"></i></a></b>.</p>
+                    <p>For each particle, for each laser measurement (1 laser scan = ~720 measurements) we compute some probabilities that we combine in a weighted sum <code>tot_prob</code>.</p>
+                    <p>Once we defined the <b>total probability</b> for each particle we <b>nomralize</b> all the weights to ensure that the sum of all the 
+                        weights of all particles will be <b>equal to 1</b>, representing a valid probability distribution.
+                    </p>
+                    
+                    <p>Finally, we can appy the <b>Resampling</b>: the particles with higher weights in the set will be kept, as they 
+                        have more probability to resemble the actual location of the Robot; while the ones with lowest weight will be discarded.
+                    </p>
+                    <p>To implement the <b>Systematic Resampling</b> we start to compute the <b>cumulative sum</b> to generate the PDF.
+                        We create a <b>starting point</b> by generating a random number beteween 0 and <i>1/n</i>, where <i>n</i> is the number
+                        of particles in the set. 
+                    </p>
+                    <p>To <b>draw the samples</b>, we iterate n- <b>random_sample_size</b>  times and use the threshold to 
+                        determine which particles to select; If u exceeds the cumulative weight of a 
+                        particle, we skip to the next particle. The selected particle is added to the S’ 
+                        array of resampled particles. During these iterations I compute the <b>mean pose</b>
+                        of all the particles to spawn a <i>random_sample_size</i> of random particles set 
+                        around the mean pose.
+                    </p>
+                    <p>At this point, where we defined and resampled our particles set we can infere the <b>robot position</b> by
+                        calculating the mean pose of all partcles and update teh robot's pose estimate with the <b>average pose</b>.
+                    </p>
+                    <div class="row-lg-6 text-center pb-3">
+                        <figure class="figure">
+                            <img class="img-fluid rounded figure-img" width="600" height="450"
+                                src="assets/img/Projects/Robot Localization/resampled.jpg" alt="Estimated pose of the Robot"
+                                title="Estimated pose of the Robot">
+                        </figure>
+                        <figcaption class="figure-caption">Estimated pose of the Robot</figcaption>
+                    </div>
+                    <p>In the figure we can notice the <b>true pose</b> of the robot as the figure of the simulated robot, <b>the particles</b> as green arrows; the <b>estimated pose</b> is the mean pose of all the particles.
+                        As we can see the Particle filter resamples the majority of the particles around (~) the <b>robot's true pose</b>.</p>
+                </div>
+            </div>
+        </section><!-- End Portfolio Details Section -->
+    </main><!-- End #main -->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>iPortfolio</span></strong>
+            </div>
+            <div class="credits">
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="assets/html/Projects/astar.html#top"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
