@@ -124,26 +124,17 @@
                             <div class="swiper-wrapper align-items-center">
 
                                 <div class="swiper-slide">
-                                    <img src="assets/img/Projects/Astar/mario star-transp.png" title="A star"
-                                        alt="A star">
+                                    <img src="assets\img\Projects\Robot Localization\poster9.png" title="Husky Ropbot" alt="Husky Ropbot">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="assets/img/Projects/Astar/template.png" title="Examples of algorithm"
-                                        alt="Examples of algorithm">
+                                    <img src="assets\img\Projects\Robot Localization\enviroinment.png" title="Environment" alt="Environment">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="assets/img/Projects/Astar/template 1.png" title="Examples of algorithm"
-                                        alt="Examples of algorithm">
+                                    <img src="assets\img\Projects\Robot Localization\poster5.png" title="Husky Ropbot" alt="Husky Ropbot">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="assets/img/Projects/Astar/template 2.png" title="Examples of algorithm"
-                                        alt="Examples of algorithm">
+                                    <img src="assets\img\Projects\Robot Localization\poster.jpg" title="Husky Ropbot" alt="Husky Ropbot">
                                 </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/img/Projects/Astar/template 3.png" title="Examples of algorithm"
-                                        alt="Examples of algorithm">
-                                </div>
-
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -216,13 +207,13 @@
                         </div>
                         <div class="align-vert col-lg-4 justify-content-center">
                             <figure class="figure">
-                                <img src="assets/img/Projects/Robot Localization/husk1y.jpg" alt="Clearpath Robotics Husky" title="Clearpath Robotics Husky" class="img-fluid rounded figure-img">
+                                <img src="assets/img/Projects/Robot Localization/husky.jpg" alt="Clearpath Robotics Husky" title="Clearpath Robotics Husky" class="img-fluid rounded figure-img">
                             </figure>
                             <figcaption class="figure-caption">Clearpath Robotics Husky</figcaption>
                         </div>
                     </div>
 
-                    <div class="pt-2 row-lg-6 text-center">
+                    <div class="pt-3 pb-1 row-lg-6 text-center">
                         <figure class="figure">
                             <img class="img-fluid figure-img rounded" width="800" height="513"
                                 src="assets\img\Projects\Robot Localization\enviroinment.png" alt="Map" title="Map">
@@ -287,7 +278,7 @@
                         <figure class="figure">
                             <img class="img-fluid figure-img"  width="900" height="296" src="assets/img/Projects/Robot Localization/scheme-likelihood.png" alt="Pseudo-code PF" title="Pseudo-code PF">
                         </figure>
-                        <figcaption class="figure-caption">Likelihood field</figcaption>
+                        <figcaption class="figure-caption">Likelihood field idea</figcaption>
                     </div>
                 </div>
 
@@ -305,8 +296,8 @@
                     </p>
 
                     <div class="row about pb-3">
-                        <div class="col-lg-6">
-                            <p>
+                        <div class="col-lg-6 justify-content-center">
+                            <p class="pt-4">
                                 $$ \delta_{\text{rot}1} = \text{atan2}(y' - y, x' - x) - \theta $$
                                 $$ \delta_{\text{rot}2} = \theta' - \theta - \delta_{\text{rot}1} $$
                                 $$ \delta_{\text{trans}} = \sqrt{(x' - x)^2 + (y' - y)^2} $$
@@ -328,6 +319,9 @@
                         $$ \hat{\delta}_{\text{trans}} = \delta_{\text{trans}} + \epsilon_{a3} |\delta_{\text{trans}}| + \epsilon_{a4} |\delta_{\text{rot}1} + \delta_{\text{rot}2}| $$
                         $$ \hat{\delta}_{\text{rot}2} = \delta_{\text{rot}2} + \epsilon_{a1} |\delta_{\text{rot}2}| + \epsilon_{a2} |\delta_{\text{trans}}| $$
                     </p>
+
+                    <p><mark>Note</mark>: that the '𝜺' function introduces some variability sampling from a normal distribution according to the 𝜶𝟏, 𝜶𝟐, 𝜶𝟑, 𝜶𝟒 parameters 
+                    that represents various gains to set accurately according to the specific task (one of the improvements could be to refine these values).</p>
 
                     <p>After computing the predicted motion, we are ready to compute the <b>update pose</b> (x_update, y_update,𝜃_update) for
                     each particle according to these formulas:</p>
@@ -355,8 +349,8 @@
                         of particles in the set. 
                     </p>
                     <p>To <b>draw the samples</b>, we iterate n- <b>random_sample_size</b>  times and use the threshold to 
-                        determine which particles to select; If u exceeds the cumulative weight of a 
-                        particle, we skip to the next particle. The selected particle is added to the S’ 
+                        determine which particles to select; If <code>u</code>, a pre-initialized treshold (according to the <b>Systematic Resampling</b>), exceeds the cumulative weight of a 
+                        particle, we skip to the next particle. The selected particle is added to the S'
                         array of resampled particles. During these iterations I compute the <b>mean pose</b>
                         of all the particles to spawn a <i>random_sample_size</i> of random particles set 
                         around the mean pose.

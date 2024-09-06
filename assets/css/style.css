@@ -1134,3 +1134,9 @@ section {
 .border{
     border: 1px solid red;  
 }
+
+code{
+    font-family: monospace;
+    font-size: 1.05rem;
+    font-weight:bolder;
+}
