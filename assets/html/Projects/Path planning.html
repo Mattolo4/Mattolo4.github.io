@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="../../../">
+
+    <title>Path Planning</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/Icon/favicon.png">
+    <meta content="Path planning algorithm" name="description">
+    <meta content="Path planning robotics software" name="keywords">
+    <meta content="Matteo Villani" name="Author">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Chart -->
+    <script src="assets/js/chart.js"></script>
+
+    <!-- LaTeX in HTML-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<!-- Visit Counter section -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QT0BDN1XE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9QT0BDN1XE');
+</script>
+
+<body>
+    <!-- Mobile nav toggle button -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <span id="top"></span>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <!--for better resolution check the img size-->
+                <img src="assets/img/profile-img2-sqaured.jpg" alt="Profile Image" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Matteo Villani</a></h1>
+
+                <div class="social-links mt-3 text-center">
+                    <a href="mailto:villanimatteo33@gmail.com" class="email"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://github.com/Mattolo4?tab=repositories" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.instagram.com/matto.lo4/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/matteo-villani-851ba5199/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!--Nav menu-->
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                            <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> 
+                            <span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-diagram-3"></i>
+                            <span>Skills</span></a></li>
+                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                            <span>Portfolio</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                            <span>Resume</span></a></li>
+                    <li><a href="#interests" class="nav-link scrollto"><i class="bx bx-server"></i>
+                            <span>Interests</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+                            <span>Contacts</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END header -->
+
+
+
+    <main id="main">
+
+        <!-- Breadcrumbs -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Path planning algorithm</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Path planning</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container about">
+
+                <div class="row gy-4">
+                    <div class="col-lg-7 align-vert">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="assets\img\Projects\Path planning\poster.png" title="environment" alt="environment">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets\img\Projects\Path planning\poster2.png" title="Robot Husky" alt="Robot Husky">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets\img\Projects\Path planning\2.jpg" title="Examples of algorithm" alt="Examples of algorithm">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: Intelligent Robot Software</li>
+                                <li><strong>Project date</strong>: Apr, 2024</li>
+                                <li><strong>Client</strong>: <a href="https://www.tugraz.at/home">University</a> Project
+                                <li><strong>GitHub</strong>: <a href="https://github.com/Mattolo4/Path-Planner-for-Robot-Husky">Source code</a></li>
+                                <li><strong>Main tool</strong>: <a href="https://www.ros.org/">ROS</a> - <a href="https://wiki.ros.org/rviz">Rviz</a> - <a href="https://gazebosim.org/home">Gazebo</a></li>
+                                <li><strong>Framework</strong>: <a href="https://wiki.ros.org/move_base"><b>Move base</b> ROS</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex text-center pt-3" style="height: 40vh; justify-content: center;">
+                            <canvas id="chart"></canvas>
+                        </div>
+
+                        <script>
+                            const ctx = document.getElementById('chart');
+                            const data = {
+                                datasets: [{
+                                    data: [58.1, 41.9],
+                                    borderWidth: 3,
+                                    backgroundColor: [
+                                        'rgb(2, 204, 59)',
+                                        'rgb(252, 3, 190)'
+                                    ],
+                                }],
+                                labels: ['C++', 'Cmake'],
+                            }
+
+                            new Chart(ctx, {
+                                type: 'doughnut',
+                                data: data,
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'Languages',
+                                        }
+                                    },
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+
+                <div class="content" data-aos="fade-left" data-aos-deley="100">
+                    <h2>Description</h2>
+                    
+                    <div class="row about">
+                        <div class="text-center align-vert col-lg-4 justify-content-center">
+                            <div>
+                                <figure class="figure">
+                                    <img src="assets/img/Projects/Path planning/husky.jpg" alt="Clearpath Robotics Husky"
+                                        title="Clearpath Robotics Husky" class="img-fluid rounded figure-img">
+                                </figure>
+                                <figcaption class="figure-caption">Clearpath Robotics Husky</figcaption>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 content">
+                            <p> The goal of this project is to develop and algorithm for the Robot <a href="https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/">Clearpath Robotics
+                                    Husky</a> such that, given the robot
+                                a <b>target point</b> to reach it will compute the <mark>optimal path</mark>, with the use of the <b>Global and Local planners</b>,
+                                and it will <b>follow the trajectory</b> to reach the defined goal.
+                            </p>
+                            <p>In robotics, <b>Local planners</b> focus on short-term, reactive navigation by adjusting the robot's path based on nearby
+                                obstacles and dynamic changes in the environment. They are fast and handle immediate situations but don't guarantee
+                                reaching a distant goal.
+                                <br>
+                                <b>Global planners</b>, on the other hand, compute an optimal or feasible path from the robot's current position to its goal,
+                                considering the entire environment map. They create a long-term plan but rely on local planners to handle real-time
+                                execution and obstacle avoidance.
+                            </p>
+                            <p>The path planning will be done in an indoor
+                                environment using a pre-compute global path that is to be refined and used for motion command
+                                computation: the algorithm will implement the <b>Stanley controller</b> computing motion commands for a robot with <b>Ackerman steering</b>
+                                in order to let the robot only perform car-like motions (no in-place rotations).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content pt-4 py-2" data-aos="fade-left" data-aos-deley="150">
+                    <h2>Lateral & Longitudinal Control</h2>
+                    
+                    <div class="row about">
+                        <div class="col-lg-8 content">
+                           <p>In order to minimize the <b>crosstrack error</b>, the distance from the center of the front axle to the closest point on the global path,
+                                we need to implement the <b>lateral control law.</b>
+                            </p>
+                            <p>
+                                The <b> lateral control law</b> aims to minimize the heading error (𝝍), defined as the
+                                difference between the tangent angle and the actual direction of the robot;
+                                and the cross-track error, <b>e(t)</b>, (red in the Fig).
+                            </p>
+                            <p>Since the Global path is just a set of poses, we identify the closes pose as <b>A</b> (in the Fig.) from which a displacement (𝚫 in the Fig) of 15 has been used to retrieve the
+                            poses ‘A- Δ′ and ‘A+ Δ′ that allow to compute the <b>tangent angle</b> (purple line) to the path.</p>
+                            <p>
+                                The goal is to write the computed driving commands (linear velocity and steering angle 𝜹(𝒕))
+                                into the topic <code>cmd_vel</code>.
+                            </p>
+                            
+                        </div>
+                        <div class="text-center  align-vert col-lg-4 justify-content-center">
+                            <div>
+                                <figure class="figure">
+                                    <img src="assets/img/Projects/Path planning/crosstrack.png" alt="Crosstrack error scheme" title="Crosstrack error scheme" class="img-fluid rounded figure-img">
+                                </figure>
+                                <figcaption class="figure-caption">Crosstrack error scheme</figcaption>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>To compute them the following control law is used:</p>
+                    <div class="justify-content-center pt-2 row-lg-7 text-center">
+                        <figure class="figure">
+                            <img src="assets\img\Projects\Path planning\control law.png" width="650" height="134" alt="Lateral Control law"
+                                title="Lateral Control law" class="img-fluid rounded figure-img">
+                        </figure>
+                        <figcaption class="figure-caption">Lateral Control law</figcaption>
+                    </div>
+
+                    <p> 
+                        where: <i>v(t)</i> is the <b>current velocity</b> and <i>K</i> represents the <b>control gain</b>: k determines the influence of the
+                        cross-track error on the steering angle. A higher value makes the robot more responsive to cross-track
+                        errors but may cause oscillations. If the robot oscillates, reduce k. If the robot is too sluggish in
+                        correcting its path, increase it.
+                    </p>
+                    <p>I will skip some details that are available on the report published on <b><a href="https://github.com/Mattolo4/Path-Planner-for-Robot-Husky" title="GitHub repo">GitHub <i class="bi bi-github"></i></a></b>.</p>
+                    <p>The primary goal of <b>Longitudinal control</b> is to minimize the error between the actual and reference linear
+                        velocity. The <b>reference velocity v<sub>d</sub></b> is set to the maximum allowable speed of the robot.
+                        The <b>velocity error <i>e<sub>v</sub></i></b>  is defined as: 𝑒𝑣 = 𝑣𝑑 − 𝑣, where <b>v</b> is the current velocity previously computed.
+                    </p>
+                    <p>A Proportional Integral <b>(PI)</b> controller is used to determine the <b>acceleration command</b> a based on the velocity
+                        error. The control law is given by:
+                    </p>
+                    <div>
+                        \[
+                        \mathbf{a} = K_p \cdot e_v + K_i \int e_v \, dt
+                        \]
+                    </div>
+                    <p>Where 𝑲𝒑 and 𝑲𝒊 are the <b>proportional</b> and <b>integral</b> gains, respectively. The integral term accumulates
+                    the velocity error over time to eliminate steady-state error.</p>
+                </div>
+
+                <div class="content pt-4 py-2" data-aos="fade-left" data-aos-deley="200">
+                    <h2>Computing Command Velocity</h2>
+                    <p>Using the formula: </p>
+                    <div>
+                        \[
+                        \mathbf{v} = v(t) + a \cdot \Delta t
+                        \]
+                    </div>
+                    <p>it’s possible to compute the velocity command that <b>minimizes the error</b> between the desired velocity and the actual one. Δ𝑡 represents the time elapsed between one
+                        iteration and the other. Since the frequency for the controller is set to <b>20Hz</b> the delta time between one iteration and the next one should be ~0.05s.
+                    </p>
+
+                    <div class="about row-lg-8 text-center">
+                        <figure class="figure">
+                            <img src="assets\img\Projects\Path planning\2.jpg" alt="Path planning example" class="figure-img img-fluid rounded" width="626" height="500">
+                            <img src="assets\img\Projects\Path planning\3.jpg" alt="Path planning example" class="img-fluid rounded figure-img" width="401" height="500">
+                            <figcaption class="figure-caption">Path Planning examples</figcaption>
+                        </figure>
+                    </div>
+
+                    <p>In the examples above we can appreciate the <span style="background-color:rgba(2, 101, 207, 0.5)">Planned Trajectory</span> and the <span style="background-color:rgba(67, 255, 100, 0.5)">actual trajectory</span>
+                        that the Robot follows.
+                    </p>
+
+                    <p>The parameters 𝑲𝒑 and 𝑲𝒊 are essential components of the PI: the <b>proportional gain</b> determines the
+                        reaction to the current error. It applies a correction based on the present value of the error: a higher
+                        value, increases the system's responsiveness, causing it to react more aggressively
+                        to the error. This can help the system reach the desired state more quickly, but the system was unstable
+                        overshooting the target. With lower values, the system was responding slowly and taking
+                        longer to reach the goal. 
+                    </p>
+
+                    <p>
+                        The <b>integral gain</b> accumulates the error over time and applies a correction based on the accumulated
+                        error. It helps to eliminate the steady-state error (the persistent difference between the desired and
+                        actual values). Like the other gains, a high value of the integral gain increases the influence of the
+                        accumulated error, which helps to reduce the steady-state error more quickly, but if too high it can
+                        lead to excessive overshooting and instability.
+                    </p>
+                </div>
+
+                <div class="content pt-4 py-1">
+                    <h2>Check for Collisions & Dynamic Obstacles</h2>
+                    
+
+                    <div class="row about pb-3" >
+                        <div class="col-lg-8 content">
+                            <p>This task requires keeping the robot from colliding with obstacles in the environment. The idea is to check at each
+                                iteration, if the <b>predicted pose</b> for the next iteration will get in touch with
+                                some forbidden cells of the <i>costmap</i> (the map is stored as a grid of cells, each cell has a value between
+                                FREE_SPACE/OBSTACLE).</p>
+                            <p>
+                                To retrieve the predicted pose a transformation is applied, then it's verified that the pose <b>doesn't "touch"</b>
+                                occupied cells.
+                            </p>
+                            <p>
+                                Having achieved all the task above the robot is able to <b>reach a given goal</b> in the map by planning and
+                                correctly/smoothly follow the planned trajectory. But the robot considers only the obstacles already
+                                present in the map: if we introduce new obstacles (by the simulation in Gazeboo) the robot is not able
+                                to update the cost map and thus plan the trajectory accordingly.
+                            </p>
+                            <p>
+                                To let it be robust in terms of dynamic obstacle we needed to <b>edit</b> the move base navigation
+                                architecture: we addeed the <i>ObstacleLayer</i> <b>plugin</b> into the <b>Global cost map</b> configuration file in
+                                order
+                                to let the robot detect the obstacle using laser; define the <b>inflation</b> parameters that define how much the
+                                robot can
+                                get close to the obstacle.
+                            
+                                By looking at what happens in the simulation when new obstacles are added we noticed that the Planner
+                                notices the obstacle thanks to the laser but <b>doesn’t generate</b> a new plan. This problem was related to
+                                both frequencies of the local/global planner. So I decided to increase the publish frequency up to a value
+                                of <b>5Hz</b> for the <u>local planner</u>, since it’s the one in charge of making new plans according to the
+                                costmap.
+                            </p>
+                        </div>
+                        <div class="text-center  align-vert col-lg-4 justify-content-center">
+                            <div>
+                                <figure class="figure">
+                                    <img src="assets\img\Projects\Path planning\1.jpg" alt="Dynamic obstacle detection"
+                                        class="figure-img img-fluid rounded" width="626" height="500">
+                                </figure>
+                                <figcaption class="figure-caption">Dynamic obstacle detection</figcaption>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>We applied this modification also to the local cost map and we obtained a fully dynamic obstacle-responsive
+                        robot that follows a trajectory to a given goal avoiding obstacles.
+                    </p>
+
+                    <div class="row-lg-11 pt-4 text-center">
+                        <div class="col-lg-8 mx-auto">
+                            <video controls class="img-fluid rounded" alt="Pick Video">
+                                <source src="assets\img\Projects\Path planning\demo.mp4" type="video/mp4" alt="Example of path planning" title="Example of path planning">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption class="figure-caption pt-1">Example of <b>Path Planning</b> (without dynamic obstalces)</figcaption>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Portfolio Details Section -->
+    </main><!-- End #main -->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>iPortfolio</span></strong>
+            </div>
+            <div class="credits">
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="assets/html/Projects/astar.html#top"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
