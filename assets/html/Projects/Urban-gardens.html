@@ -31,6 +31,10 @@
     <!--CDN: <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>--> 
     <script src="assets/js/chart.js"></script>
 
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
@@ -145,30 +149,40 @@
 
               <div class="d-flex text-center pt-3" style="height: 40vh; justify-content: center;"> 
                 <canvas id="chart"></canvas>
-                  <script>
-                    const ctx = document.getElementById('chart');
-                    const data = {
-                      datasets: [{
-                        data: [95.1, 4.9],
-                        borderWidth: 3,
-                      }],
-                      labels: ['Jupyter', 'Python']
-                    }
 
-                    new Chart(ctx, {
-                      type: 'doughnut',
-                      data: data,
-                      options: {
-                        responsive: true,
-                        plugins: {
-                          title: {
-                            display: true,
-                            text: 'Languages'
-                          }
-                        },
-                      }
-                    })
-                  </script>
+                <script>
+                  const info = [95.1, 4.9];
+                  const lang = ['Jupyter', 'Python'];
+
+
+                  const colors = generateDistinctColors(info.length);
+                  const ctx = document.getElementById('chart');
+                  console.log(colors);
+
+                  const data = {
+                    datasets: [{
+                      data: info,
+                      borderWidth: 3,
+                      backgroundColor: colors,
+                    }],
+                    labels: lang,
+                  }
+
+                  new Chart(ctx, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                      responsive: true,
+                      plugins: {
+                        title: {
+                          display: true,
+                          text: 'Languages',
+                        }
+                      },
+                    }
+                  })
+                </script>
+
               </div>
             </div>
           </div>

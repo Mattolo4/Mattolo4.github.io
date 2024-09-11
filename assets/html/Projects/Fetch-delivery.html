@@ -25,13 +25,16 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Chart -->
+        <!-- Chart -->
     <script src="assets/js/chart.js"></script>
+
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
 
     <!-- LaTeX in HTML-->
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -164,17 +167,20 @@
                         </div>
 
                         <script>
+                            const info = [89.0, 11.0];
+                            const lang = ['C++', 'CMake'];
+
+                            const colors = generateDistinctColors(info.length);
                             const ctx = document.getElementById('chart');
+                            console.log(colors);
+
                             const data = {
                                 datasets: [{
-                                    data: [89.0, 11.0],
+                                    data: info,
                                     borderWidth: 3,
-                                    backgroundColor: [
-                                        'rgb(2, 204, 59)',
-                                        'rgb(252, 3, 190)'
-                                    ],
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['C++', 'CMake'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {

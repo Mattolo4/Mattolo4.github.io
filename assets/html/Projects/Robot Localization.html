@@ -27,6 +27,10 @@
     <!-- Chart -->
     <script src="assets/js/chart.js"></script>
 
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
+
     <!-- LaTeX in HTML-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -157,18 +161,21 @@
                         </div>
 
                         <script>
+                            const info = [86.2, 13.8]
+                            const lang = ['C++', 'Cmake'];
+
+                            const colors = generateDistinctColors(info.length);
                             const ctx = document.getElementById('chart');
+                            console.log(colors);
+
                             const data = {
-                                    datasets: [{
-                                        data: [86.2, 13.8],
-                                        borderWidth: 3,
-                                        backgroundColor: [
-                                            'rgb(2, 204, 59)',
-                                            'rgb(252, 3, 190)'
-                                        ],
-                                    }],
-                                    labels: ['C++', 'Cmake'],
-                                }
+                                datasets: [{
+                                    data: info,
+                                    borderWidth: 3,
+                                    backgroundColor: colors,
+                                }],
+                                labels: lang,
+                            }
 
                             new Chart(ctx, {
                                 type: 'doughnut',

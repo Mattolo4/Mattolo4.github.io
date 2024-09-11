@@ -24,8 +24,12 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Chart -->
+        <!-- Chart -->
     <script src="assets/js/chart.js"></script>
+
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -146,19 +150,21 @@
                         </div>
 
                         <script>
+                            const info = [72.2, 15.1, 11.1, 1.6];
+                            const lang = ['C++', 'C', 'CMake', 'Tcl'];
+
+
+                            const colors = generateDistinctColors(info.length);
                             const ctx = document.getElementById('chart');
+                            console.log(colors);
+
                             const data = {
                                 datasets: [{
-                                    data: [72.2, 15.1, 11.1, 1.6],
+                                    data: info,
                                     borderWidth: 3,
-                                    backgroundColor: [
-                                        'rgb(2, 204, 59)',
-                                        'rgb(3, 111, 252)',
-                                        'rgb(252, 3, 190)',
-                                        'rgb(240, 151, 7)'
-                                    ],
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['C++', 'C', 'CMake', 'Tcl'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {
@@ -170,7 +176,6 @@
                                         title: {
                                             display: true,
                                             text: 'Languages',
-                                            
                                         }
                                     },
                                 }
