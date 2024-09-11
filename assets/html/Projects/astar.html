@@ -25,8 +25,12 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Chart -->
+        <!-- Chart -->
     <script src="assets/js/chart.js"></script>
+
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
 
     <!-- LaTeX in HTML-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -153,15 +157,16 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                        <script>
-                            const ctx = document.getElementById('chart');
+                       <script>
+                            const colors = generateDistinctColors();
+
                             const data = {
                                 datasets: [{
                                     data: [90.5, 9.5],
-                                    borderWidth: 3,
+                                    borderWidth: 1,
                                     backgroundColor: [
-                                        'rgb(102, 201, 4)',
-                                        'rgb(240, 14, 22)'
+                                        colors[0],
+                                        colors[1]
                                     ],
                                 }],
                                 labels: ['JavaScript', 'HTML'],

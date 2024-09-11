@@ -23,8 +23,12 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Chart -->
+        <!-- Chart -->
     <script src="assets/js/chart.js"></script>
+
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -144,18 +148,19 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                        <script>
-                            const ctx = document.getElementById('chart');
+                       <script>
+                            const colors = generateDistinctColors();
+
                             const data = {
                                 datasets: [{
                                     data: [89.5, 4.7, 4.2, 1.3, 0.3],
                                     borderWidth: 1,
                                     backgroundColor: [
-                                        'rgb(252, 156, 45)',
-                                        'rgb(157, 237, 71)',
-                                        'rgb(43, 82, 2)',
-                                        'rgb(96, 2, 173)',
-                                        'rgb(237, 21, 32)'
+                                        colors[0],
+                                        colors[1],
+                                        colors[2],
+                                        colors[3],
+                                        colors[4]
                                     ],
                                 }],
                                 labels: ['Java', 'JavaScript', 'LaTex', 'CSS', 'HTML'],

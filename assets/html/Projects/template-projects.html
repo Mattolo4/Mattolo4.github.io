@@ -28,6 +28,10 @@
     <!-- Chart -->
     <script src="assets/js/chart.js"></script>
 
+    <!-- Random color generator -->
+    <script src="assets/js/randomColors.js"></script>
+
+
     <!-- LaTeX in HTML-->
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
@@ -161,15 +165,16 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                        <script>
-                            const ctx = document.getElementById('chart');
+                       <script>
+                            const colors = generateDistinctColors();
+
                             const data = {
                                 datasets: [{
-                                    data: [90.5, 9.5],
+                                    data: [50.0, 50.0],
                                     borderWidth: 3,
                                     backgroundColor: [
-                                        'rgb(102, 201, 4)',
-                                        'rgb(240, 14, 22)'
+                                        colors[0],
+                                        colors[1]
                                     ],
                                 }],
                                 labels: ['JavaScript', 'HTML'],
