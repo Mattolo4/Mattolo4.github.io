@@ -156,19 +156,20 @@
                         </div>
 
                         <script>
-                            const colors = generateDistinctColors();
+                            const info = [58.1, 41.9];
+                            const lang = ['C++', 'Cmake'];
 
+                            const colors = generateDistinctColors(info.length);
                             const ctx = document.getElementById('chart');
+                            console.log(colors);
+
                             const data = {
                                 datasets: [{
-                                    data: [58.1, 41.9],
+                                    data: info,
                                     borderWidth: 3,
-                                    backgroundColor: [
-                                        colors[0],
-                                        colors[1]
-                                    ],
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['C++', 'Cmake'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {

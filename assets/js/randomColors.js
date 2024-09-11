@@ -1,7 +1,6 @@
 // Function to generate an array of distinct RGB color strings
-function generateDistinctColors() {
+function generateDistinctColors(n) {
     const colors = [];
-    const n = 5;
 
     // Start with a random hue
     let baseHue = Math.random();

@@ -166,18 +166,21 @@
                         </div>
 
                        <script>
-                            const colors = generateDistinctColors();
+                            const info = [50.0, 50.0];   
+                            const lang = ['JavaScript', 'HTML'];
 
+
+                            const colors = generateDistinctColors(info.length);
+                            const ctx = document.getElementById('chart');
+                            console.log(colors);
+                            
                             const data = {
                                 datasets: [{
-                                    data: [50.0, 50.0],
+                                    data: info,
                                     borderWidth: 3,
-                                    backgroundColor: [
-                                        colors[0],
-                                        colors[1]
-                                    ],
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['JavaScript', 'HTML'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {

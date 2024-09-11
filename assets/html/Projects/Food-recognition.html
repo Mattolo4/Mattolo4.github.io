@@ -149,21 +149,22 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                       <script>
-                            const colors = generateDistinctColors();
+                        <script>
+                            const info = [72.2, 15.1, 11.1, 1.6];
+                            const lang = ['C++', 'C', 'CMake', 'Tcl'];
+
+
+                            const colors = generateDistinctColors(info.length);
+                            const ctx = document.getElementById('chart');
+                            console.log(colors);
 
                             const data = {
                                 datasets: [{
-                                    data: [72.2, 15.1, 11.1, 1.6],
+                                    data: info,
                                     borderWidth: 3,
-                                    backgroundColor: [
-                                        colors[0],
-                                        colors[1],
-                                        colors[2],
-                                        colors[3]
-                                    ],
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['C++', 'C', 'CMake', 'Tcl'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {
@@ -175,7 +176,6 @@
                                         title: {
                                             display: true,
                                             text: 'Languages',
-                                            
                                         }
                                     },
                                 }

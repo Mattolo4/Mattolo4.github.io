@@ -157,19 +157,21 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                       <script>
-                            const colors = generateDistinctColors();
+                        <script>
+                            const info = [90.5, 9.5];
+                            const lang = ['JavaScript', 'HTML'];
+
+                            const colors = generateDistinctColors(info.length);
+                            const ctx = document.getElementById('chart');
+                            console.log(colors);
 
                             const data = {
                                 datasets: [{
-                                    data: [90.5, 9.5],
-                                    borderWidth: 1,
-                                    backgroundColor: [
-                                        colors[0],
-                                        colors[1]
-                                    ],
+                                    data: info,
+                                    borderWidth: 3,
+                                    backgroundColor: colors,
                                 }],
-                                labels: ['JavaScript', 'HTML'],
+                                labels: lang,
                             }
 
                             new Chart(ctx, {
@@ -186,6 +188,8 @@
                                 }
                             })
                         </script>
+
+                       
                     </div>
                 </div>
 

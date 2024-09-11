@@ -24,7 +24,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <!-- Chart -->
+    <!-- Chart -->
     <script src="assets/js/chart.js"></script>
 
     <!-- Random color generator -->
@@ -160,20 +160,22 @@
                             <canvas id="chart"></canvas>
                         </div>
 
-                       <script>
-                            const colors = generateDistinctColors();
+                        <script>
+                            const info = [86.2, 13.8]
+                            const lang = ['C++', 'Cmake'];
+
+                            const colors = generateDistinctColors(info.length);
+                            const ctx = document.getElementById('chart');
+                            console.log(colors);
 
                             const data = {
-                                    datasets: [{
-                                        data: [86.2, 13.8],
-                                        borderWidth: 3,
-                                        backgroundColor: [
-                                            colors[0],
-                                            colors[1]
-                                        ],
-                                    }],
-                                    labels: ['C++', 'Cmake'],
-                                }
+                                datasets: [{
+                                    data: info,
+                                    borderWidth: 3,
+                                    backgroundColor: colors,
+                                }],
+                                labels: lang,
+                            }
 
                             new Chart(ctx, {
                                 type: 'doughnut',

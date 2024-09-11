@@ -149,36 +149,40 @@
 
               <div class="d-flex text-center pt-3" style="height: 40vh; justify-content: center;"> 
                 <canvas id="chart"></canvas>
-                  <script>
-                    const colors = generateDistinctColors();
 
-                    const ctx = document.getElementById('chart');
-                    const data = {
-                      datasets: [{
-                        data: [95.1, 4.9],
-                        borderWidth: 3,
-                        backgroundColor: [
-                          colors[0],
-                          colors[1]
-                        ],
-                      }],
-                      labels: ['Jupyter', 'Python']
+                <script>
+                  const info = [95.1, 4.9];
+                  const lang = ['Jupyter', 'Python'];
+
+
+                  const colors = generateDistinctColors(info.length);
+                  const ctx = document.getElementById('chart');
+                  console.log(colors);
+
+                  const data = {
+                    datasets: [{
+                      data: info,
+                      borderWidth: 3,
+                      backgroundColor: colors,
+                    }],
+                    labels: lang,
+                  }
+
+                  new Chart(ctx, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                      responsive: true,
+                      plugins: {
+                        title: {
+                          display: true,
+                          text: 'Languages',
+                        }
+                      },
                     }
+                  })
+                </script>
 
-                    new Chart(ctx, {
-                      type: 'doughnut',
-                      data: data,
-                      options: {
-                        responsive: true,
-                        plugins: {
-                          title: {
-                            display: true,
-                            text: 'Languages'
-                          }
-                        },
-                      }
-                    })
-                  </script>
               </div>
             </div>
           </div>
