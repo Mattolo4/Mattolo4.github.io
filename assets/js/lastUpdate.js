@@ -1,3 +1,4 @@
+
 // Function to calculate the time difference and display the "last update" label
 function displayLastUpdate(dateString) {
     // Split the date string into day, month, and year
