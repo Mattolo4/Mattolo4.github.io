@@ -10,7 +10,7 @@ function generateDistinctColors(n) {
         let hue = (baseHue + i * hueStep) % 1; 
 
         // Convert HSL to RGB
-        const rgbColor = hslToRgb(hue, 0.64, 0.6);  // 0.5 is saturation, 0.6 is lightness
+        const rgbColor = hslToRgb(hue, 1, 0.6);  // 0.5 is saturation, 0.6 is brightness
         colors.push(rgbColor); // Push RGB string to colors array
     }
 
