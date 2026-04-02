@@ -32,4 +32,4 @@ function displayLastUpdate(dateString) {
 }
 
 // Call the function with the last update date in dd/mm/yyyy format
-displayLastUpdate('04/03/2026'); // FIXME: REPLACE
+displayLastUpdate('02/04/2026'); // FIXME: REPLACE
